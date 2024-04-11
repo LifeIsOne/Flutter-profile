@@ -1,3 +1,4 @@
+import 'package:ch06_flutter_profile/components/profile_drawer.dart';
 import 'package:ch06_flutter_profile/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,8 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: ProfileDrawer(),
+      appBar: _buildProfiledAppBar(),
       body: Column(
         children: [
           SizedBox(height: 20),
@@ -46,6 +49,10 @@ class ProfilePage extends StatelessWidget {
   }
 
   AppBar _buildProfiledAppBar() {
-    return AppBar();
+    return AppBar(
+      leading: Icon(Icons.arrow_back_ios),
+      title: Text("Profile"),
+      centerTitle: true,
+    );
   }
 }
