@@ -30,6 +30,29 @@ class ProfileHeader extends StatelessWidget {
   }
 
   Widget _bulidHeaderProfile() {
-    return SizedBox();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "GetinThene",
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          "프로그래머/작가/강사",
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+        Text(
+          "데어 프로그래밍",
+          style: TextStyle(
+            fontSize: 15,
+          ),
+        )
+      ],
+    );
   }
 }
