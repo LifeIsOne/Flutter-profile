@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class ProfileCountInfo extends StatelessWidget {
   const ProfileCountInfo({super.key});
@@ -8,17 +8,35 @@ class ProfileCountInfo extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround, // Row에 자식의 간격조정
       children: [
-        _buildInfo("50","Posts"),
+        _buildInfo("50", "Posts"),
         _bulidLine(),
       ],
     );
   }
 
   Widget _buildInfo(String count, String title) {
-    return SizedBox();
+    return Column(
+      children: [
+        Text(
+          count,
+          style: TextStyle(fontSize: 15),
+        ),
+        SizedBox(
+          height: 2,
+        ),
+        Text(
+          title,
+          style: TextStyle(fontSize: 15),
+        ),
+      ],
+    );
   }
 
   Widget _bulidLine() {
-    return SizedBox();
+    return Container(
+      width: 2,
+      height: 60,
+      color: Colors.blue,
+    );
   }
 }
